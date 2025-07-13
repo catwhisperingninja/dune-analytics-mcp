@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dune-analytics-mcp"
+version = "0.1.0"
+description = "A mcp server that bridges Dune Analytics data to AI agents."
+authors = ["dev <dev@example.com>"]
+readme = "README.md"
+packages = [{include = "*"}]
+
+[tool.poetry.dependencies]
+python = ">=3.13,<4.0"
+mcp = {extras = ["cli"], version = ">=1.4.1"}
+pandas = ">=2.2.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+dune-analytics-mcp = "main:main"
